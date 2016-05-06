@@ -80,6 +80,6 @@ if __name__ == '__main__' :
         print '# unknown cultivar provided in {}'.format(args.vcffname)
         print '# compared against database in {}'.format(args.plinkfname)
         print '# {} SNPs in intersection of {} in unknown and {} in database.\n'.format(len(intersection),len(vcfpos),len(plinkpos))
-        for i in range(3) :
+        for i in range(30) :
             print '# {}\t{:.3f}\t{}'.format(i+1, distlist[rank[i]], namelist[rank[i]])
     
