@@ -79,7 +79,6 @@ But this will output to stdout, you can also specify an output file.
 
 ```
 $ src/identify.py data/NB-core_v4 -vcf unknown.vcf -range 4 100000 500000 -out distances.dat
-
 ```
 ##### Comparing a sample from dataset against all others
 
@@ -95,7 +94,6 @@ Additionally, one can specify a range and an output file.
 
 ```
 $ src/identify.py data/NB-core_v4 -name B007-range 4 100000 500000 -out distances.dat
-
 ```
 
 #### Output
@@ -112,21 +110,18 @@ A quick way of removing the comments from the output file :
 
 ```
 awk '$1 != "#" ' distances.dat > dist-nocomment.dat
-
 ```
 
 A quick way of sorting the resulting a file would be :
 
 ```
 sort -k 2 -n dist-nocomment.dat > dist-sorted.dat
-
 ```
 
 And of course, these could be chained such as :
 
 ```
 awk '$1 != "#" ' dist.dat | sort -k 2 -n > dist-sorted.dat
-
 ```
 
 which will remove comments and sort the list by distance at once. 
